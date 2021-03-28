@@ -81,12 +81,11 @@ img {
 /* Utility styles */
 .container {
   margin: 0 auto;
-  padding: 0 1em;
   max-width: 370px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-image: url('./images/pattern-curve.svg');
   background-position: 100% 104%;
@@ -94,14 +93,19 @@ img {
   background-size: 100%;
 }
 
+.main {
+  /* margin-top: 1.5em; */
+  padding: 0 1em;
+  position: relative;
+}
+
 /* SECTIONS */
 
-.testimonial-card {
-  margin-top: 2em;
+.slide {
+  margin-top: 0em;
 }
 
 .picture-area {
-  position: relative;
   background-image: url('./images/pattern-bg.svg');
   background-position: top left;
   background-repeat: no-repeat;
@@ -120,6 +124,7 @@ img {
 
 .buttons {
   position: absolute;
+  top: 293px;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -136,6 +141,10 @@ img {
 .prev-btn:hover,
 .next-btn:hover {
   opacity: 0.8;
+}
+.prev-btn:active,
+.next-btn:active {
+  opacity: 0.3;
 }
 
 .prev-btn {
@@ -177,4 +186,13 @@ img {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-height: 670px) {
+  .container {
+    justify-content: flex-start;
+  }
+  .main {
+    margin-top: 1.5em;
+  }
 }
