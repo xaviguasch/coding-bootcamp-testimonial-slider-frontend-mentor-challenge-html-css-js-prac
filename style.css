@@ -102,7 +102,12 @@ img {
 /* SECTIONS */
 
 .slide {
-  margin-top: 0em;
+  display: block;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
 }
 
 .picture-area {

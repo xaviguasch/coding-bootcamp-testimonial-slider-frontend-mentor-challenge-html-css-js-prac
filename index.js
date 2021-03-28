@@ -7,9 +7,9 @@ showSlide(currentSlide)
 
 function showSlide(currentSlide) {
   slides.forEach((slide) => {
-    slide.style.display = 'none'
+    slide.classList.add('hidden')
   })
-  slides[currentSlide].style.display = 'block'
+  slides[currentSlide].classList.remove('hidden')
 }
 
 function goNextSlide() {
