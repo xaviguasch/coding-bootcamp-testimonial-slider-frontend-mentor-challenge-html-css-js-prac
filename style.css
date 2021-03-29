@@ -154,6 +154,10 @@ img {
   text-align: center;
   margin-top: 1.5em;
   padding: 1em 1.4em;
+  background-image: url('./images/pattern-quotes.svg');
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: 15%;
 }
 
 .person {
@@ -234,6 +238,10 @@ img {
     text-align: left;
     margin-top: 0;
     padding: 0;
+    background-position: 20% -10%;
+    background-repeat: no-repeat;
+    background-size: 15%;
+    overflow: visible;
   }
 
   .quote {
