@@ -13,6 +13,7 @@
 :root {
   --ff-inter: 'Inter', sans-serif;
   --fs-text: 1rem;
+  --fs-text-desktop: 1.75rem;
 
   --fw-light: 300;
   --fw-reg: 500;
@@ -46,11 +47,6 @@ body {
   font-size: var(--fs-text);
   font-family: var(--ff-inter);
   color: var(--clr-dark-blue);
-  /* color: var(--clr-very-dark-grayish-blue);
-  font-size: var(--fs-body);
-  font-weight: var(--fw-reg);
-  line-height: 1.6;
-  background-color: var(--clr-light-grayish-blue); */
 }
 
 img {
@@ -73,11 +69,6 @@ img {
   color: var(--clr-grayish-blue);
 }
 
-/* Helper classes */
-.hidden {
-  display: none;
-}
-
 /* Utility styles */
 .container {
   margin: 0 auto;
@@ -94,7 +85,6 @@ img {
 }
 
 .main {
-  /* margin-top: 1.5em; */
   padding: 0 1em;
   position: relative;
 }
@@ -102,8 +92,8 @@ img {
 /* SECTIONS */
 
 .slide {
-  display: block;
-  opacity: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .hidden {
@@ -193,6 +183,7 @@ img {
   color: hsl(228, 45%, 44%);
 }
 
+/* Query for small widths in large screens, not mobile */
 @media (max-height: 670px) {
   .container {
     justify-content: flex-start;
@@ -200,4 +191,69 @@ img {
   .main {
     margin-top: 1.5em;
   }
+}
+
+@media (min-width: 930px) {
+  .container {
+    max-width: 100%;
+    flex-direction: row;
+    background-position: 100% 130%;
+  }
+
+  .main {
+    width: 950px;
+    padding: 0;
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 600px;
+  }
+
+  .picture-area {
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 0% 55%;
+    background-size: 110%;
+  }
+
+  .avatar-image {
+    margin: 0;
+  }
+  .quote-area {
+    width: 50%;
+    margin-right: -5em;
+    text-align: left;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .quote {
+    font-size: var(--fs-text-desktop);
+    font-weight: var(--fw-light);
+  }
+
+  .person {
+    display: flex;
+    gap: 1em;
+    margin-top: 2em;
+  }
+
+  .buttons {
+    top: 490px;
+    left: 58%;
+  }
+}
+
+/* Helper classes */
+.hidden {
+  display: none;
 }
